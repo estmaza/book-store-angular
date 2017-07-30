@@ -1,0 +1,17 @@
+<p>
+  author-list works!
+</p>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Books Count</th>
+  </tr>
+  <tr *ngFor="let author of authors">
+    <th>{{author.id}}</th>
+    <th>{{author.firstName}}</th>
+    <th>{{author.lastName}}</th>
+    <th></th>
+  </tr>
+</table>
