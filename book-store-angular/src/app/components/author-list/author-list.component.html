@@ -8,10 +8,10 @@
     <th>Last Name</th>
     <th>Books Count</th>
   </tr>
-  <tr *ngFor="let author of authors">
+  <tr *ngFor="let author of authors | async">
     <th>{{author.id}}</th>
     <th>{{author.firstName}}</th>
     <th>{{author.lastName}}</th>
-    <th></th>
+    <th>{{author.books}}</th>
   </tr>
 </table>

@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-
-import 'rxjs/add/operator/toPromise';
-
 import { Author } from '../models/author';
+import { Observable } from 'rxjs/Observable';
+
+import 'rxjs/add/operator/map';
 
 // TODO Try to create generic base class
 @Injectable()
@@ -13,14 +13,12 @@ export class AuthorService {
   constructor(private http: Http) { }
 
   // TypeScript doesn't support method overloads so I can't call them get() and get(id: number)
-  getAuthors(): Promise<Author[]> {
+  getAuthors(): Observable<Author[]> {
     return this.http.get(this.API_PATH)
-      .toPromise()
-      .then(response => response.json() as Author[])
-      .catch(this.handleError);
+      .map(res => res.json().data || []);
   }
 
-  getAuthor(id: number): Promise<Author> {
+  getAuthor(id: number): Observable<Author> {
     return null;
   }
 
