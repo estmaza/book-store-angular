@@ -1,4 +1,29 @@
-<p>
-  author-detail works!
-</p>
+<h2>Add/Edit Author</h2>
+<form [formGroup]="form" novalidate>
+  <div>
+    <label>Id:
+      <input type="number" formControlName="id">
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">First Name:
+      <input class="form-control" formControlName="firstName">
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Last Name:
+      <input class="form-control" formControlName="lastName">
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Biography:
+      <textarea class="form-control" formControlName="biography"></textarea>
+    </label>
+  </div>
+</form>
 <button (click)="cancel()">Cancel</button>
+<hr>
+<p>Form value: {{ form.value | json }}</p>
+<p>Form status: {{ form.status | json }}</p>
+<p>Is First Name Dirty: {{ form.get('firstName').dirty | json}}</p>
+

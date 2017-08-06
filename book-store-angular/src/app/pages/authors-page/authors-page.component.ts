@@ -23,6 +23,10 @@ export class AuthorsPageComponent implements OnInit {
     return this.service.getAuthors();
   }
 
+  add(): void {
+    //this.selectedAuthor = new Author();
+  }
+
   select(author: Author): void {
     this.selectedAuthor = author;
   }
