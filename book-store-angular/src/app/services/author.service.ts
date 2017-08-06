@@ -32,7 +32,7 @@ export class AuthorService {
   }
 
   delete(id: number): void {
-
+    console.log('delete api call does not implemented. AuthorId = ' + id);
   }
 
   private handleError(error: any): Promise<any> {

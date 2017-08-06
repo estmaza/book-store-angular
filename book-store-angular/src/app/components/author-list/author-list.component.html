@@ -1,17 +1,14 @@
-<p>
-  author-list works!
-</p>
 <table>
   <tr>
-    <th>Id</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Books Count</th>
+    <th>#</th>
+    <th>Name</th>
+    <th>Books</th>
+    <th></th>
   </tr>
   <tr *ngFor="let author of authors | async">
-    <th>{{author.id}}</th>
-    <th>{{author.firstName}}</th>
-    <th>{{author.lastName}}</th>
-    <th>{{author.books}}</th>
+    <td>{{author.id}}</td>
+    <td (click)="onSelect(author)">{{author.firstName}} {{author.lastName}}</td>
+    <td>{{author.books}}</td>
+    <td (click)="onDelete(author)">Delete</td>
   </tr>
 </table>

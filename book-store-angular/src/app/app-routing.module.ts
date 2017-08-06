@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
-import { AuthorListComponent } from './components/author-list/author-list.component';
-import { BookListComponent } from './components/book-list/book-list.component';
+import { AuthorsPageComponent } from './pages/authors-page/authors-page.component';
+import { BooksPageComponent } from './pages/books-page/books-page.component';
 
 export const routes: Routes = [
   {
@@ -11,10 +11,10 @@ export const routes: Routes = [
   },
   {
     path: 'books',
-    component: BookListComponent
+    component: BooksPageComponent
   },
   {
     path: 'authors',
-    component: AuthorListComponent
+    component: AuthorsPageComponent
   }
 ];
