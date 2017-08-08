@@ -39,4 +39,9 @@ export class AuthorsPageComponent implements OnInit {
     this.service.delete(author.id);
   }
 
+  save(author: Author): void {
+    console.log('save from author page ' + author.firstName);
+    // should I call post or put here?
+  }
+
 }

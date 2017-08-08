@@ -1,5 +1,5 @@
 <h2>Add/Edit Author</h2>
-<form [formGroup]="form" novalidate>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
   <div>
     <label>Id:
       <input type="number" formControlName="id">
@@ -20,10 +20,10 @@
       <textarea class="form-control" formControlName="biography"></textarea>
     </label>
   </div>
+  <button type="submit" [disabled]="form.pristine" (click)="cancel()">Cancel</button>
+  <button (click)="cancel()">Cancel</button>
 </form>
-<button (click)="cancel()">Cancel</button>
 <hr>
 <p>Form value: {{ form.value | json }}</p>
 <p>Form status: {{ form.status | json }}</p>
 <p>Is First Name Dirty: {{ form.get('firstName').dirty | json}}</p>
-

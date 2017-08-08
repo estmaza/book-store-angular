@@ -11,6 +11,7 @@ import { Author } from '../../models/author';
 export class AuthorDetailComponent implements OnChanges {
   @Input() author: Author;
   @Output() canceled: EventEmitter<any> = new EventEmitter();
+  @Output() saved: EventEmitter<Author> = new EventEmitter();
 
   form: FormGroup;
 
@@ -32,8 +33,13 @@ export class AuthorDetailComponent implements OnChanges {
       id: 0,
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      biography: ['', Validators.required]
+      biography: ''
     });
+  }
+
+  onSubmit() {
+    console.log('OnSubmit');
+    
   }
 
   cancel(): void {
