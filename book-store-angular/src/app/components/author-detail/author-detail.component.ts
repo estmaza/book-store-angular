@@ -38,8 +38,8 @@ export class AuthorDetailComponent implements OnChanges {
   }
 
   onSubmit() {
-    console.log('OnSubmit');
-    
+    const model = this.form.value;
+    this.saved.emit(model);
   }
 
   cancel(): void {

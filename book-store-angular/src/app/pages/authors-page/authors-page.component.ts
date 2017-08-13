@@ -41,7 +41,16 @@ export class AuthorsPageComponent implements OnInit {
 
   save(author: Author): void {
     console.log('save from author page ' + author.firstName);
-    // should I call post or put here?
+    this.selectedAuthor = null;
+    if (author.id == 0) {
+      this.service.post(author);
+    } else {
+      this.service.put(author);
+    }
+  }
+
+  create(): void {
+    this.selectedAuthor = new Author();
   }
 
 }

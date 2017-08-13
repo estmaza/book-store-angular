@@ -20,8 +20,8 @@
       <textarea class="form-control" formControlName="biography"></textarea>
     </label>
   </div>
-  <button type="submit" [disabled]="form.pristine" (click)="cancel()">Cancel</button>
-  <button (click)="cancel()">Cancel</button>
+  <button type="submit" [disabled]="form.pristine">Save</button>
+  <button type="reset" (click)="cancel()">Cancel</button>
 </form>
 <hr>
 <p>Form value: {{ form.value | json }}</p>

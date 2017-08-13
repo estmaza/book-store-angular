@@ -2,5 +2,5 @@
   authors-page works!
 </p>
 <app-author-detail *ngIf="selectedAuthor" [author]="selectedAuthor" (canceled)="cancel($event)" (saved)="save($event)"></app-author-detail>
-<app-author-list *ngIf="!selectedAuthor" [authors]="authors" (selected)="select($event)" (deleted)="delete($event)"></app-author-list>
+<app-author-list *ngIf="!selectedAuthor" [authors]="authors" (selected)="select($event)" (deleted)="delete($event)" (create)="create($event)"></app-author-list>
 

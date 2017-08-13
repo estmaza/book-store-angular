@@ -12,6 +12,7 @@ export class AuthorListComponent implements OnInit {
   @Input() authors: Observable<Author[]>;
   @Output() selected: EventEmitter<Author> = new EventEmitter();
   @Output() deleted: EventEmitter<Author> = new EventEmitter();
+  @Output() create: EventEmitter<Author> = new EventEmitter();
 
   constructor() { }
 
@@ -23,6 +24,10 @@ export class AuthorListComponent implements OnInit {
 
   onDelete(author: Author): void {
     this.deleted.emit(author);
+  }
+
+  onCreate(): void {
+    this.create.emit();
   }
 
 }
