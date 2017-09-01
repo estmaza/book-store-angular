@@ -1,10 +1,12 @@
-<div style="text-align:center">
-  <h1>
-    {{title}}
-  </h1>
+<div class="container-fluid">
+  <div style="text-align:center">
+    <h1>
+      {{title}}
+    </h1>
+  </div>
+  <ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a routerLink="/books">Books</a></li>
+    <li role="presentation"><a routerLink="/authors">Authors</a></li>
+  </ul>
+  <router-outlet></router-outlet>
 </div>
-<div>
-  <a routerLink="/books">Books</a>
-  <a routerLink="/authors">Authors</a>
-</div>
-<router-outlet></router-outlet>

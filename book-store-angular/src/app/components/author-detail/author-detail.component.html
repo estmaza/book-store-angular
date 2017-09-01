@@ -20,6 +20,11 @@
       <textarea class="form-control" formControlName="biography"></textarea>
     </label>
   </div>
+  <div class="form-group">
+    <label class="center-block">Books:
+      <ss-multiselect-dropdown [options]="options | async" formControlName="books"></ss-multiselect-dropdown>
+    </label>
+  </div>
   <button type="submit" [disabled]="form.pristine">Save</button>
   <button type="reset" (click)="cancel()">Cancel</button>
 </form>

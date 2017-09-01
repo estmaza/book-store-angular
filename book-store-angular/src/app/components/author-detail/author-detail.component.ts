@@ -1,6 +1,7 @@
 import { Component, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
+import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
 import { Author } from '../../models/author';
 
 @Component({
@@ -10,6 +11,7 @@ import { Author } from '../../models/author';
 })
 export class AuthorDetailComponent implements OnChanges {
   @Input() author: Author;
+  @Input() options: IMultiSelectOption[];
   @Output() canceled: EventEmitter<any> = new EventEmitter();
   @Output() saved: EventEmitter<Author> = new EventEmitter();
 
@@ -24,7 +26,8 @@ export class AuthorDetailComponent implements OnChanges {
       id: this.author.id || 0,
       firstName: this.author.firstName || '',
       lastName: this.author.lastName || '',
-      biography: this.author.biography || ''
+      biography: this.author.biography || '',
+      books: this.author.books || [],
     });
   }
 
@@ -33,8 +36,10 @@ export class AuthorDetailComponent implements OnChanges {
       id: 0,
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      biography: ''
+      biography: '',
+      books: []
     });
+    console.log(this.options);
   }
 
   onSubmit() {

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { MdTableModule } from '@angular/material';
+import { AlertModule } from 'ngx-bootstrap';
 
 import { routes } from './app-routing.module';
 import { ComponentsModule } from './components/components.module';
@@ -26,6 +27,7 @@ import { BooksPageComponent } from './pages/books-page/books-page.component';
     ComponentsModule,
     ServicesModule,
     MdTableModule,
+    AlertModule.forRoot(),
     RouterModule.forRoot(routes)
   ],
   providers: [],

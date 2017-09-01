@@ -1,38 +1,47 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import { Author } from '../models/author';
 import { Observable } from 'rxjs/Observable';
 
+import { Author } from '../models/author';
+import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
+
 import 'rxjs/add/operator/map';
+import { HttpClient } from "@angular/common/http";
 
 // TODO Try to create generic base class
 @Injectable()
 export class AuthorService {
   private API_PATH = 'http://localhost:5000/api/authors';
 
-  constructor(private http: Http) { }
+  constructor(private http: HttpClient) { }
 
   // TypeScript doesn't support method overloads so I can't call them get() and get(id: number)
   getAuthors(): Observable<Author[]> {
-    return this.http.get(this.API_PATH)
-      .map(res => res.json().data || []);
+    return this.http.get<Author[]>(this.API_PATH);
   }
 
   getAuthor(id: number): Observable<Author> {
-    return null;
+    let url = `${this.API_PATH}/${id}`;
+    return this.http.get<Author>(url);
   }
 
-  // TODO maybe I should return bool as succeeded/failed
-  post(model: Author): void {
-    //add
+  options(): Observable<IMultiSelectOption[]> {
+    let url = `${this.API_PATH}/options`;
+    let result = this.http.get<IMultiSelectOption[]>(url);
+    return result;
   }
 
-  put(model: Author): void {
-    //update
+  post(model: Author): Observable<Author> {
+    return this.http.post<Author>(this.API_PATH, model);
   }
 
-  delete(id: number): void {
-    console.log('delete api call does not implemented. AuthorId = ' + id);
+  put(model: Author): Observable<boolean> {
+    let url = `${this.API_PATH}/${model.id}`;
+    return this.http.put<boolean>(url, model);
+  }
+
+  delete(id: number): Observable<boolean> {
+    let url = `${this.API_PATH}/${id}`;
+    return this.http.delete<boolean>(url);
   }
 
   private handleError(error: any): Promise<any> {
