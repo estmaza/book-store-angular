@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
 import { Observable } from 'rxjs/Observable';
 
 import { Author } from '../models/author';
 import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
-
-import 'rxjs/add/operator/map';
-import { HttpClient } from "@angular/common/http";
 
 // TODO Try to create generic base class
 @Injectable()

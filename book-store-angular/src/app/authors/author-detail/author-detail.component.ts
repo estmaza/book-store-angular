@@ -1,8 +1,9 @@
 import { Component, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
+// Models
+import { Author } from '../../core/models/author';
 import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
-import { Author } from '../../models/author';
 
 @Component({
   selector: 'app-author-detail',

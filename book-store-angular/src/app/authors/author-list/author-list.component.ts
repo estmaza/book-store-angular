@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
-import { Author } from '../../models/author';
 import { Observable } from 'rxjs/Observable';
+
+// Models
+import { Author } from '../../core/models/author';
 
 @Component({
   selector: 'app-author-list',

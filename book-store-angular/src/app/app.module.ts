@@ -2,32 +2,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HttpModule } from '@angular/http';
-import { MdTableModule } from '@angular/material';
-import { AlertModule } from 'ngx-bootstrap';
 
 import { routes } from './app-routing.module';
-import { ComponentsModule } from './components/components.module';
-import { ServicesModule } from './services/services.module';
 
+// Modules
+import { CoreModule } from './core/core.module';
+import { AuthorsModule } from './authors/authors.module';
+import { BooksModule } from './books/books.module';
+
+// Components
 import { AppComponent } from './app.component';
-import { AuthorsPageComponent } from './pages/authors-page/authors-page.component';
-import { BooksPageComponent } from './pages/books-page/books-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AuthorsPageComponent,
-    BooksPageComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpModule,
-    ComponentsModule,
-    ServicesModule,
-    MdTableModule,
-    AlertModule.forRoot(),
+    CoreModule,
+    AuthorsModule,
+    BooksModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

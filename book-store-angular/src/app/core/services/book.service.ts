@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
-
-import { Book } from '../models/book';
-import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
+import { HttpClient } from "@angular/common/http";
 import { Observable } from 'rxjs/Observable';
 
-import 'rxjs/add/operator/map';
-import { HttpClient } from "@angular/common/http";
+// Models
+import { Book } from '../models/book';
+import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
 
 @Injectable()
 export class BookService {

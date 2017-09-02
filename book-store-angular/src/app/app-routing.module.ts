@@ -1,7 +1,4 @@
-import { Routes } from '@angular/router';
-
-import { AuthorsPageComponent } from './pages/authors-page/authors-page.component';
-import { BooksPageComponent } from './pages/books-page/books-page.component';
+import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
@@ -11,10 +8,10 @@ export const routes: Routes = [
   },
   {
     path: 'books',
-    component: BooksPageComponent
+    loadChildren: './books/books.module#BooksModule'
   },
   {
     path: 'authors',
-    component: AuthorsPageComponent
+    loadChildren: './authors/authors.module#AuthorsModule'
   }
 ];

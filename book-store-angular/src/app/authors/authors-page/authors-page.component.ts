@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-
-import { AuthorService } from '../../services/author.service';
-import { BookService } from '../../services/book.service';
-import { Author } from '../../models/author';
-import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
 import { Observable } from 'rxjs/Observable';
+
+// Services
+import { AuthorService } from '../../core/services/author.service';
+import { BookService } from '../../core/services/book.service';
+
+// Models
+import { Author } from '../../core/models/author';
+import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
 
 @Component({
   selector: 'app-authors-page',
