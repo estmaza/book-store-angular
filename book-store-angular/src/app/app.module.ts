@@ -3,15 +3,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+/* App Root */
+import { AppComponent } from './app.component';
+
+/* Routing Module */
 import { routes } from './app-routing.module';
 
-// Modules
+/* Feature Modules */
 import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 import { AuthorsModule } from './authors/authors.module';
 import { BooksModule } from './books/books.module';
-
-// Components
-import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     BrowserAnimationsModule,
     CoreModule,
+    SharedModule,
     AuthorsModule,
     BooksModule,
     RouterModule.forRoot(routes)
