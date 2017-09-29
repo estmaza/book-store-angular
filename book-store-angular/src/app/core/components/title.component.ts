@@ -2,10 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-title',
-  template: `
-    <div>
-      <h1>{{title}}</h1>
-    </div>`,
+  template: `<h1>{{title}}</h1>`,
   styles: [
     'h1 { text-align:center; }'
   ]

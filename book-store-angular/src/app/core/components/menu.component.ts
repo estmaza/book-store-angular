@@ -7,7 +7,7 @@ import { MenuItem } from '.././models/menuItem';
   selector: 'app-menu',
   template: `
     <ul class="nav nav-tabs">
-      <li *ngFor="let route of routes; let i = index" role="presentation" [class.active]="route.id == selected">
+      <li *ngFor="let route of routes; let i = index" role="presentation" [class.active]="i == selected">
         <a routerLink="{{route.link}}">
           {{route.name}}
         </a>
@@ -17,12 +17,12 @@ import { MenuItem } from '.././models/menuItem';
 
 export class MenuComponent implements OnInit {
   routes: MenuItem[];
-  selected: number = 1;
+  selected: number = 0;
 
   constructor() { 
     this.routes = [
-      new MenuItem(1, 'Books', '/books', 0),
-      new MenuItem(2, 'Authors', '/authors', 0)
+      new MenuItem('Books', '/books'),
+      new MenuItem('Authors', '/authors')
     ]
   }
 

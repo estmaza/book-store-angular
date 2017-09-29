@@ -1,7 +1,7 @@
 import { NgModule, ModuleWithProviders, Optional, SkipSelf } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 /* Components */
 import { TitleComponent } from './components/title.component';
@@ -21,7 +21,8 @@ import { MenuItem } from './models/menuItem';
 @NgModule({
   imports: [
     RouterModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports: [
     TitleComponent,
@@ -39,4 +40,10 @@ import { MenuItem } from './models/menuItem';
     HttpService
   ],
 })
-export class CoreModule { }
+export class CoreModule {
+  constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
+    if (parentModule) {
+      throw new Error('CoreModule is already loaded. Import it in the AppModule only');
+    }
+  }
+}

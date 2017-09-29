@@ -1,18 +1,24 @@
 import { NgModule } from '@angular/core';
+import { SharedModule } from '../shared/shared.module';
 
 // Routes
 import { routing } from './books.routing';
 
-// Components
-import { BooksPageComponent } from './books-page/books-page.component';
-import { BookListComponent } from './book-list/book-list.component';
+/* Components */
+import { BooksComponent } from './books.component';
+import { BookItemComponent } from './components/book-item.component';
+import { NewBookComponent } from './components/new-book.component';
 
 @NgModule({
-  imports: [routing],
+  imports: [
+    SharedModule,
+    routing
+  ],
   exports: [],
   declarations: [
-    BooksPageComponent,
-    BookListComponent
+    BooksComponent,
+    BookItemComponent,
+    NewBookComponent
   ],
   providers: [],
 })
