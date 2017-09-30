@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Book } from '../core/models/book';
-import { Author } from '../core/models/author';
+import { Book } from '../shared/models/book';
+import { Author } from '../shared/models/author';
 
 @Component({
   selector: 'app-books',
@@ -13,5 +13,5 @@ export class BooksComponent implements OnInit {
 
   ngOnInit() { }
 
-  
+
 }

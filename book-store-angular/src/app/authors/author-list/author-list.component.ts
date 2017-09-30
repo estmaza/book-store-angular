@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 // Models
-import { Author } from '../../core/models/author';
+import { Author } from '../../shared/models/author';
 
 @Component({
   selector: 'app-author-list',
