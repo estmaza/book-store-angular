@@ -3,7 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from 'rxjs/Observable';
 
 // Models
-import { Book } from '../models/book';
+import { Book } from '../../shared/models/book';
 import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
 
 @Injectable()

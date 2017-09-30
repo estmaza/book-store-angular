@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from 'rxjs/Observable';
 
-import { Author } from '../models/author';
+import { Author } from '../../shared/models/author';
 import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
 
 // TODO Try to create generic base class
