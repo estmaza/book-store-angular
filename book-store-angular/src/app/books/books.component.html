@@ -1,4 +1,5 @@
-<ul>
-  <app-book-item></app-book-item>
-</ul>
-<app-new-book></app-new-book>
+<table class="table table-striped">
+  <tr class="table-head" [columns]="columns"></tr>
+  <tr class="book-item" *ngFor="let book of books | async" [model]="book"></tr>
+  <tr class="new-book"></tr>
+</table>

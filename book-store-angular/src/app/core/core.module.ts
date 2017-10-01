@@ -13,11 +13,6 @@ import { AuthorService } from './services/author.service';
 import { BookService } from './services/book.service';
 import { HttpService } from './services/http.service';
 
-// Models
-import { Author } from './models/author';
-import { Book } from './models/book';
-import { MenuItem } from './models/menuItem';
-
 @NgModule({
   imports: [
     RouterModule,

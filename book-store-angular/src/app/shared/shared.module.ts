@@ -2,6 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+/* Components */
+import { TableHeadComponent } from './components/table-head.component';
+
+/* Third Party */
+
 @NgModule({
   imports: [
     CommonModule,
@@ -9,9 +14,12 @@ import { FormsModule } from '@angular/forms';
   ],
   exports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    TableHeadComponent
   ],
-  declarations: [],
+  declarations: [
+    TableHeadComponent
+  ],
   providers: [],
 })
 export class SharedModule { }

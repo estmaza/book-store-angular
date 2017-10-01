@@ -13,6 +13,13 @@ import { CoreModule } from './core/core.module';
 import { AuthorsModule } from './authors/authors.module';
 import { BooksModule } from './books/books.module';
 
+/* Rxjs Operators */
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/filter';
+
 @NgModule({
   declarations: [
     AppComponent
