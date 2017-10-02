@@ -7,9 +7,9 @@ import { SharedModule } from '../shared/shared.module';
 import { routing } from './authors.routing';
 
 // Components
-import { AuthorsPageComponent } from './authors-page/authors-page.component';
-//import { AuthorListComponent } from './author-list/author-list.component';
-//import { AuthorDetailComponent } from './author-detail/author-detail.component';
+import { AuthorsComponent } from './components/authors.component';
+import { AuthorItemComponent } from './components/author-item.component';
+import { AuthorDetailComponent } from './components/author-detail.component';
 
 @NgModule({
   imports: [
@@ -18,9 +18,9 @@ import { AuthorsPageComponent } from './authors-page/authors-page.component';
   ],
   exports: [],
   declarations: [
-    AuthorsPageComponent,
-    //AuthorListComponent,
-    //AuthorDetailComponent
+    AuthorsComponent,
+    AuthorItemComponent,
+    AuthorDetailComponent
   ],
   providers: [],
 })

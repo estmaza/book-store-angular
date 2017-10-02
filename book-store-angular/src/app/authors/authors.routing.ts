@@ -1,10 +1,10 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AuthorsPageComponent } from './authors-page/authors-page.component';
+import { AuthorsComponent } from './components/authors.component';
 
 const routes: Routes = [
-  { path: '', component: AuthorsPageComponent }
+  { path: '', component: AuthorsComponent }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forChild(routes);

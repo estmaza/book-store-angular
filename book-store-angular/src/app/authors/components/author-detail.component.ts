@@ -7,8 +7,7 @@ import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
 
 @Component({
   selector: 'app-author-detail',
-  templateUrl: './author-detail.component.html',
-  styleUrls: ['./author-detail.component.css']
+  templateUrl: 'author-detail.component.html'
 })
 export class AuthorDetailComponent implements OnChanges {
   @Input() author: Author;
