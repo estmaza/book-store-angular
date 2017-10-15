@@ -1,11 +1,5 @@
-<div class="row">
-  <div class="col-xs-12">
-    
-  </div>
-</div>
-
-<table class="table table-striped">
-  <tr class="table-head" [columns]="columns"></tr>
-  <tr class="book-item" *ngFor="let book of books | async" [model]="book"></tr>
-  <tr class="new-book"></tr>
-</table>
+<grid-head [columns]="columns" class="row"></grid-head>
+<span>
+  <book-item *ngFor="let book of books | async" [model]="book" class="row"></book-item>
+</span>
+<new-book class="row"></new-book>

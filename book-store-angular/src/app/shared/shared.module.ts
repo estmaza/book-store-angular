@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 /* Components */
-import { TableHeadComponent } from './components/table-head.component';
+import { GridHeadComponent } from './components/grid-head.component';
 
 /* Third Party */
 
@@ -15,10 +15,11 @@ import { TableHeadComponent } from './components/table-head.component';
   exports: [
     CommonModule,
     FormsModule,
-    TableHeadComponent
+    ReactiveFormsModule,
+    GridHeadComponent
   ],
   declarations: [
-    TableHeadComponent
+    GridHeadComponent
   ],
   providers: [],
 })

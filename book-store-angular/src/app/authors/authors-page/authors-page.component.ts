@@ -19,7 +19,7 @@ export class AuthorsPageComponent implements OnInit {
   options: Observable<IMultiSelectOption[]>;
   authors: Observable<Author[]>;
 
-  constructor(private service: AuthorService, 
+  constructor(private service: AuthorService,
     private bookService: BookService) { }
 
   ngOnInit() {
@@ -32,7 +32,7 @@ export class AuthorsPageComponent implements OnInit {
   }
 
   getBookOptions(): Observable<IMultiSelectOption[]> {
-    return this.bookService.options();
+    return this.bookService.getOptions();
   }
 
   select(author: Author): void {

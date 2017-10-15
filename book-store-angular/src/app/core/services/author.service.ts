@@ -22,7 +22,7 @@ export class AuthorService {
     return this.http.get<Author>(url);
   }
 
-  options(): Observable<IMultiSelectOption[]> {
+  getOptions(): Observable<IMultiSelectOption[]> {
     let url = `${this.API_PATH}/options`;
     let result = this.http.get<IMultiSelectOption[]>(url);
     return result;

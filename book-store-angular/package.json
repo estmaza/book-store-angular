@@ -23,9 +23,8 @@
     "@angular/platform-browser-dynamic": "^4.3.6",
     "@angular/router": "^4.3.6",
     "angular-2-dropdown-multiselect": "^1.5.4",
-    "bootstrap": "^3.3.7",
+    "flexboxgrid": "^6.3.1",
     "core-js": "^2.5.0",
-    "ngx-bootstrap": "^1.9.1",
     "rxjs": "^5.4.3",
     "zone.js": "^0.8.17"
   },

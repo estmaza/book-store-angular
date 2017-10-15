@@ -36,7 +36,7 @@ export class AuthorsComponent implements OnInit {
   }
 
   getBookOptions(): Observable<IMultiSelectOption[]> {
-    return this.bookService.options();
+    return this.bookService.getOptions();
   }
 
   select(author: Author): void {

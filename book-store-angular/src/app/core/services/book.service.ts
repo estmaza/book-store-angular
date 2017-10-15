@@ -21,7 +21,7 @@ export class BookService {
     return this.http.get<Book>(url);
   }
 
-  options(): Observable<IMultiSelectOption[]> {
+  getOptions(): Observable<IMultiSelectOption[]> {
     let url = `${this.API_PATH}/options`;
     return this.http.get<IMultiSelectOption[]>(url);
   }

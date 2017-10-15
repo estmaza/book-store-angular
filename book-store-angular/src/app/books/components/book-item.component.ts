@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { Book } from 'app/shared/models/book';
 
 @Component({
-  selector: '.book-item',
+  selector: 'book-item',
   templateUrl: 'book-item.component.html'
 })
 
