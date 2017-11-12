@@ -1,5 +1,5 @@
-<grid-head [columns]="columns" class="row"></grid-head>
+<grid-head [columns]="columns"></grid-head>
 <span>
-  <book-item *ngFor="let book of books | async" [model]="book" class="row"></book-item>
+  <book-item *ngFor="let book of books | async" [model]="book"></book-item>
 </span>
-<new-book class="row"></new-book>
+<new-book></new-book>

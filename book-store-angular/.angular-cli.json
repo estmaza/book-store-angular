@@ -10,7 +10,8 @@
       "assets": [
         "assets",
         "favicon.ico",
-        "service-worker.js"
+        "service-worker.js",
+        "title-bg.jpg"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -20,7 +21,6 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/flexboxgrid/css/flexboxgrid.min.css",
         "styles.css"
       ],
       "scripts": [],

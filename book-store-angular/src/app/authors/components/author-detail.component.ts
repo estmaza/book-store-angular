@@ -39,7 +39,6 @@ export class AuthorDetailComponent implements OnChanges {
       biography: '',
       books: []
     });
-    console.log(this.options);
   }
 
   onSubmit() {

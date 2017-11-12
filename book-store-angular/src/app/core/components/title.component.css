@@ -1,0 +1,27 @@
+.title {
+  display: grid;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100%;
+  align-content: center;
+}
+
+.title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(69, 71, 37, 0);
+  opacity: 0.85;
+}
+
+h1 {
+  z-index: 1;
+  font-size: 52px;
+  text-align: center;
+  margin: 0px;
+  color: #fff;
+} 
